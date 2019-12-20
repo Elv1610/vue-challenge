@@ -7,8 +7,9 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   data: {
-    info: {
-    },
+    info: [
+
+    ],
     config: {
       headers: {
         'accept-language': 'it',
