@@ -2,13 +2,11 @@
   <li class="product-list__item">
     <article class="product" itemscope itemtype="http://schema.org/Product">
       <figure class="product__image-wrapper">
-        <img
-          class="product__image"
-          src="images/activity_image.jpeg"
-          alt="Product"
-          itemprop="image"
-        />
-        <button class="product__wishlist-button button button--round button--wishlist">
+        <img class="product__image" src="images/activity_image.jpeg" alt="Product" itemprop="image" />
+        <button
+          @click="addToWishlist()"
+          class="product__wishlist-button button button--round button--wishlist"
+        >
           <svg
             class="icon"
             width="20px"
@@ -42,9 +40,14 @@
 </template>
 
 <script>
-
+import { store } from "../store/store";
 export default {
-  name: "Card"
+  name: "Card",
+  methods: {
+    addToWishlist() {
+      store.addItemToWishlist();
+    }
+  }
 };
 </script>
 

@@ -41,25 +41,27 @@
             points="12.3598869 13.2675869 20 13.2675869 13.8200565 17.7545318 16.1782804 25.0221187 9.99833694 20.5318477 3.81839348 25.0221187 6.17994346 17.7545318 0 13.2675869 7.63678696 13.2675869 9.99833694 6"
           />
         </svg>
-        <span class="bag__item-counter">{{wishlistCounter}}</span>
+        <span class="bag__item-counter">{{storeState.wishlistCounter}}</span>
       </div>
     </aside>
   </header>
 </template>
 
 <script>
+import { store } from "../store/store";
 export default {
   name: "Header",
+  data() {
+    return {
+      storeState: store.state
+    };
+  },
   props: {
     bagPrice: {
       type: Number,
       default: 0
     },
     bagCounter: {
-      type: Number,
-      default: 0
-    },
-    wishlistCounter: {
       type: Number,
       default: 0
     },

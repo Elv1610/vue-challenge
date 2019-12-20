@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 export const globalStateApp = new Vue({
   render: h => h(App),
@@ -17,7 +17,7 @@ export const globalStateApp = new Vue({
         'x-musement-currency': 'EUR',
         'x-musement-version': '3.4.0'
       }
-    }
+    },
   },
   mounted() {
     axios
