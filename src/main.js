@@ -4,7 +4,7 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-new Vue({
+export const globalStateApp = new Vue({
   render: h => h(App),
   data: {
     info: {
