@@ -151,20 +151,20 @@
         </nav>
       </div>
     </main>
-    <footer class="container">
-      <p class="footer__sidenote">Footer</p>
-    </footer>
+    <Footer />
   </body>
 </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
   components: {
-    Header
+    Header,
+    Footer
   }
 };
 </script>

@@ -8,7 +8,6 @@ new Vue({
   render: h => h(App),
   data: {
     info: {
-
     },
     config: {
       headers: {
