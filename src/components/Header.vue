@@ -1,9 +1,9 @@
 <template>
   <header class="header container">
-    <h1 class="page-title">BRAND</h1>
+    <h1 class="page-title">{{brand}}</h1>
     <aside class="header-bag">
       <div class="header-bag__item header-bag__count">
-        <div class="header-bag__price">£210</div>
+        <div class="header-bag__price">{{bagPrice}}</div>
         <svg
           class="icon"
           width="17px"
@@ -21,7 +21,7 @@
             fill-rule="evenodd"
           />
         </svg>
-        <span class="bag__item-counter">10</span>
+        <span class="bag__item-counter">{{bagCounter}}</span>
       </div>
       <div class="header-bag__item header-bag__wishlist-count">
         <svg
@@ -41,7 +41,7 @@
             points="12.3598869 13.2675869 20 13.2675869 13.8200565 17.7545318 16.1782804 25.0221187 9.99833694 20.5318477 3.81839348 25.0221187 6.17994346 17.7545318 0 13.2675869 7.63678696 13.2675869 9.99833694 6"
           />
         </svg>
-        <span class="bag__item-counter">5</span>
+        <span class="bag__item-counter">{{wishlistCounter}}</span>
       </div>
     </aside>
   </header>
@@ -51,9 +51,21 @@
 export default {
   name: "Header",
   props: {
-    msg: {
+    bagPrice: {
+      type: Number,
+      default: 0
+    },
+    bagCounter: {
+      type: Number,
+      default: 0
+    },
+    wishlistCounter: {
+      type: Number,
+      default: 0
+    },
+    brand: {
       type: String,
-      default: "Ciaooooo"
+      default: "Brand"
     }
   }
 };
