@@ -48,6 +48,7 @@
       </aside>
     </header>
     <main class="product-page">
+      <HelloWorld />
       <div class="container">
         <ul class="product-list">
           <li class="product-list__item">
